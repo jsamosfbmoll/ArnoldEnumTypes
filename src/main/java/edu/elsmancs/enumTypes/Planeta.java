@@ -12,9 +12,19 @@ public enum Planeta {
 	
 	private double masa = 0;
 	private double radio = 0;
+	private final double G = 6.67300E-11;
 	
 	private Planeta(double masa, double radio) {
 		this.masa = masa;
 		this.radio = radio;
+	}
+	
+	public double pesoSuperficie(double pesoObjeto) {
+		double pesoEnSuperficie = 0.0;
+		double gravedadTierra = this.G * EARTH.masa / (EARTH.radio * EARTH.radio);
+		double gravedadEnSuperficie = this.G * this.masa / (this.radio * this.radio);
+		double masaObjeto = pesoObjeto / gravedadTierra;
+		pesoEnSuperficie = masaObjeto * gravedadEnSuperficie;
+		return pesoEnSuperficie;
 	}
 }
