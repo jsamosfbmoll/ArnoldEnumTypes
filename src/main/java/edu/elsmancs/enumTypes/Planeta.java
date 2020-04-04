@@ -36,6 +36,26 @@ public enum Planeta {
 		return this.tipoPlaneta;
 	}
 	
+	public static List<Planeta> getPlanetasTerrestres() {
+		List<Planeta> planetasTerrestres = new ArrayList<Planeta>();
+		for (Planeta planeta : Planeta.values()) {
+			if (planeta.getTipo().equals("terrestre")) {
+				planetasTerrestres.add(planeta);
+			}
+		}
+		return planetasTerrestres;
+	}
+	
+	public static List<Planeta> getGigantesGaseosos() {
+		List<Planeta> planetasTerrestres = new ArrayList<Planeta>();
+		for (Planeta planeta : Planeta.values()) {
+			if (planeta.getTipo().equals("gaseoso")) {
+				planetasTerrestres.add(planeta);
+			}
+		}
+		return planetasTerrestres;
+	}
+	
 	private double getGravedad(Planeta planeta) {
 		return this.G * planeta.masaPlaneta / (planeta.radioPlaneta * planeta.radioPlaneta);
 	}
