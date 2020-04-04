@@ -11,12 +11,12 @@ public enum Planeta {
 	NEPTUNE(1.024e+26, 2.4746e7);
 	
 	private double masaPlaneta = 0;
-	private double radio = 0;
+	private double radioPlaneta = 0;
 	private final double G = 6.67300E-11;
 	
 	private Planeta(double masa, double radio) {
 		this.masaPlaneta = masa;
-		this.radio = radio;
+		this.radioPlaneta = radio;
 	}
 	
 	public double getMasa() {
@@ -24,11 +24,11 @@ public enum Planeta {
 	}
 	
 	public double getRadio() {
-		return this.radio;
+		return this.radioPlaneta;
 	}
 	
 	private double getGravedad(Planeta planeta) {
-		return this.G * planeta.masaPlaneta / (planeta.radio * planeta.radio);
+		return this.G * planeta.masaPlaneta / (planeta.radioPlaneta * planeta.radioPlaneta);
 	}
 	
 	private double getMasaObjeto(double pesoObjeto) {
