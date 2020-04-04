@@ -27,10 +27,14 @@ public enum Planeta {
 		return this.radio;
 	}
 	
+	private double getGravedad(Planeta planeta) {
+		return this.G * planeta.masa / (planeta.radio * planeta.radio);
+	}
+	
 	public double pesoSuperficie(double pesoObjeto) {
 		double pesoEnSuperficie = 0.0;
-		double gravedadTierra = this.G * EARTH.masa / (EARTH.radio * EARTH.radio);
-		double gravedadEnSuperficie = this.G * this.masa / (this.radio * this.radio);
+		double gravedadTierra = this.getGravedad(EARTH);
+		double gravedadEnSuperficie = this.getGravedad(this);
 		double masaObjeto = pesoObjeto / gravedadTierra;
 		pesoEnSuperficie = masaObjeto * gravedadEnSuperficie;
 		return pesoEnSuperficie;
