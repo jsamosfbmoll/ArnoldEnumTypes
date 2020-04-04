@@ -23,6 +23,10 @@ public enum Planeta {
 		return this.masa;
 	}
 	
+	public double getRadio() {
+		return this.radio;
+	}
+	
 	public double pesoSuperficie(double pesoObjeto) {
 		double pesoEnSuperficie = 0.0;
 		double gravedadTierra = this.G * EARTH.masa / (EARTH.radio * EARTH.radio);
