@@ -3,7 +3,7 @@ package edu.elsmancs.enumTypes;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
 
-import edu.elsmancs.enumTypes.Planeta;
+//import edu.elsmancs.enumTypes.Planeta;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -54,7 +54,7 @@ public class ArnoldEnumTypeTest {
 	@Test
 	public void PlanetaGetTipoTest() {
 		Planeta planeta = Planeta.MERCURY;
-		assertThat(planeta.getTipo()).isEqualTo("terrestre");
+		assertThat(planeta.getTipo()).isEqualTo("TERRESTRE");
 	}
 	
 	@Test

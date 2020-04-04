@@ -1,6 +1,6 @@
 package edu.elsmancs.enumTypes;
 
-import edu.elsmancs.enumTypes.Planeta;
+//import edu.elsmancs.enumTypes.Planeta;
 
 public class ArnoldMain {
 	
