@@ -49,7 +49,13 @@ public class ArnoldEnumTypeTest {
 	public void PlanetaGetRadioTest(){		
 		Planeta planeta = Planeta.MERCURY;
 		assertThat(planeta.getRadio()).isEqualTo(2.4397e+6);
-	}	
+	}
+	
+	@Test
+	public void PlanetaGetTipoTest() {
+		Planeta planeta = Planeta.MERCURY;
+		assertThat(planeta.getTipo()).isEqualTo("terrestre");
+	}
 	
 	@Test
 	public void PlanetaNamesIteratorTest(){
